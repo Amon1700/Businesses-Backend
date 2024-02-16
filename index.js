@@ -18,11 +18,13 @@ app.post('/', async (req, res) => {
 
         const browser = await puppeteer.launch()
 
+        console.log(business)
+        
+
         const page = await browser.newPage()
 
         await page.goto(`https://www.google.com/maps/search/`);
 
-        console.log(business)
 
         await page.type('#searchboxinput', `${latitude}, ${longitude}`)
 
