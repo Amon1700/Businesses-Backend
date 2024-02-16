@@ -14,12 +14,7 @@ app.post('/', async (req, res) => {
     try {
         const { business, latitude, longitude} = req.body
 
-        
-
         const browser = await puppeteer.launch()
-
-        console.log(business)
-        
 
         const page = await browser.newPage()
 
